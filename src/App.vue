@@ -20,6 +20,9 @@ export default {
     layout(){
       return this.$route.meta.layout || 'main-layout'
     }
+  },
+  mounted() {
+    this.$router.push('/about')
   }
 };
 </script>
