@@ -1,8 +1,9 @@
 <template>
 
   <div class="ma-12 pa-12">
-    <Header/>
+    <Header @navClick="navClick"/>
     <v-navigation-drawer
+        v-model="drawer"
         app
         style="box-shadow: none"
     >
@@ -68,6 +69,16 @@ import Header from '../components/Header'
 export default {
   components: {
     Header
+  },
+  data(){
+    return {
+      drawer: true
+    }
+  },
+  methods: {
+    navClick(){
+      this.drawer = !this.drawer
+    }
   }
 }
 </script>
